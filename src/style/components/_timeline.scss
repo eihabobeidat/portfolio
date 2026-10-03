@@ -1,0 +1,23 @@
+.timeline {
+  position: relative; list-style: none; margin: 0 0 0 0.5rem; padding: 0;
+  border-left: 1px solid rgba($neon-500, 0.3);
+
+  &__item { position: relative; padding-left: 2rem; padding-bottom: 2.75rem; &:last-child { padding-bottom: 0; } }
+
+  &__dot {
+    position: absolute; left: -0.47rem; top: 0.4rem;
+    width: 0.875rem; height: 0.875rem; border-radius: 50%;
+    border: 2px solid $ink; background: $neon-500;
+    box-shadow: 0 0 10px rgba($neon-500, 0.7);
+  }
+  &__item--live &__dot { background: $ok; box-shadow: 0 0 10px $ok; animation: pulse 2s ease-in-out infinite; }
+
+  &__era { font-family: $font-mono; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.2em; color: $neon-300; margin-bottom: 0.25rem; }
+  &__title { font-size: 1.2rem; margin-bottom: 0.15rem; }
+  &__company { color: $paper-dim; font-size: 0.9375rem; margin-bottom: 0.75rem; }
+  &__now { font-family: $font-mono; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em; color: $ok; border: 1px solid rgba($ok, 0.4); background: rgba($ok, 0.1); border-radius: 4px; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: middle; }
+
+  ul { padding-left: 1.1rem; margin: 0; max-width: 44rem; }
+  li li, ul li { color: $paper-dim; font-size: 0.9375rem; line-height: 1.65; margin-bottom: 0.4rem; }
+  ul li::marker { color: $neon-500; }
+}

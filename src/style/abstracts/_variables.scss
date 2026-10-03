@@ -1,15 +1,36 @@
-// COLORS
-$primary-color: #d09fe4;
-$secondary-color: #362de3;
+// ── Palette: pitch-black base + neon blue ──────────────────────
+$ink: #05070d;
+$ink-soft: #0a0e17;
+$ink-card: #0e1320;
+$ink-line: #1a2133;
 
+$paper: #f5f7fa;
+$paper-dim: #a3acbd;
+$muted: #6b7489;
+
+$neon-300: #93c5fd;
+$neon-400: #60a5fa;
+$neon-500: #3b82f6;
+$neon-600: #2563eb;
+$neon-700: #1d4ed8;
+$cyan: #22d3ee;
+
+$ok: #34d399;
+$warn: #fbbf24;
+$err: #fb7185;
+
+// Kept for anything still referencing the old names
+$primary-color: $neon-400;
+$secondary-color: $neon-600;
 $white-color: #fff;
 
-$dark-grey: #333333;
-$light-grey: #d2d2d2;
+// Shadows
+$shadow-neon-sm: 0 0 20px rgba($neon-500, 0.25);
+$shadow-neon: 0 0 40px rgba($neon-500, 0.35), 0 0 80px rgba($neon-500, 0.15);
+$shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
-$dark-blue-text: #272341; // For Headings
+// Type
+$font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
 
-// FONT SIZE
-$default-font-size: 1.6rem;
-$big-font-size: 4rem;
-$mid-font-size: 2.5rem;
+$container: 80rem;

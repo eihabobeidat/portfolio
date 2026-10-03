@@ -1,4 +1,5 @@
 const Webpack = require("webpack");
+const SeoPlugin = require("./build/seo-plugin");
 
 module.exports = {
   entry: {
@@ -30,6 +31,8 @@ module.exports = {
   },
   // This config allows to use jQuery $ sign
   plugins: [
+    // Build-time SEO: project cards, structured data, sitemap, robots.txt, icons
+    new SeoPlugin(),
     new Webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",

@@ -1,0 +1,73 @@
+// ── Home: AI band ─────────────────────────────
+.ai-band {
+  padding: 4rem 0;
+  @media (min-width: 992px) { padding: 5rem 0; }
+  &__card {
+    display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start;
+    border-radius: 1.5rem; padding: 2rem; color: inherit; box-shadow: $shadow-neon;
+    &:hover { color: inherit; }
+    @media (min-width: 992px) { flex-direction: row; align-items: center; padding: 2.5rem 3rem; gap: 2.5rem; }
+  }
+  &__icon {
+    width: 4.5rem; height: 4.5rem; border-radius: 1.25rem; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: $neon-300;
+    background: rgba($neon-500, 0.12); border: 1px solid rgba($neon-500, 0.35);
+    box-shadow: 0 0 30px rgba($neon-500, 0.35);
+    text-shadow: 0 0 18px rgba($neon-500, 0.9);
+  }
+  &__copy {
+    flex: 1;
+    h2 { font-size: 1.75rem; margin-bottom: 0.75rem; @media (min-width: 576px) { font-size: 2.25rem; } }
+    p { color: $paper-dim; margin: 0; max-width: 40rem; }
+    .eyebrow { display: flex; align-items: center; margin-bottom: 0.75rem; }
+  }
+  &__cta { flex-shrink: 0; }
+}
+
+// ── AI page ───────────────────────────────────
+.progress-track {
+  height: 0.5rem; border-radius: 999px; margin-top: 1.25rem;
+  background: rgba($neon-500, 0.12); border: 1px solid rgba($neon-500, 0.25); overflow: hidden;
+  span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, $neon-600, $neon-300); box-shadow: 0 0 12px rgba($neon-500, 0.8); }
+}
+
+.why {
+  border-radius: 1rem; padding: 2rem;
+  &__title { font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  p { color: $paper-dim; }
+  &__list { list-style: none; padding: 0; margin: 1.5rem 0 0;
+    li { display: flex; gap: 0.75rem; align-items: baseline; color: $paper; font-size: 0.9375rem; margin-bottom: 0.75rem; }
+    i { color: $neon-400; }
+  }
+}
+
+.timeline--roadmap .timeline__item { padding-bottom: 1.5rem; }
+.timeline--roadmap .timeline__dot { top: 1.6rem; background: $ink-line; box-shadow: none; border-color: rgba($neon-500, 0.5); }
+.timeline__item--next .timeline__dot { background: $neon-400; box-shadow: 0 0 12px rgba($neon-500, 0.9); animation: pulse 2s ease-in-out infinite; }
+
+.phase {
+  border-radius: 1rem; padding: 1.5rem;
+  &__head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+  &__num { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.2em; color: $neon-300; }
+  &__status {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: $font-mono; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;
+    color: $muted; border: 1px solid $ink-line; border-radius: 999px; padding: 0.2rem 0.6rem;
+    &--next { color: $neon-300; border-color: rgba($neon-500, 0.45); background: rgba($neon-500, 0.1); }
+  }
+  &__title { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  &__text { color: $paper-dim; font-size: 0.9375rem; margin-bottom: 1rem; }
+  &__build { margin: 1rem 0 0; padding-top: 0.9rem; border-top: 1px solid $ink-line; font-size: 0.75rem; color: $paper-dim; }
+}
+
+.resource {
+  display: flex; flex-direction: column; gap: 0.5rem; width: 100%;
+  border-radius: 1rem; padding: 1.5rem; color: $paper;
+  &:hover { color: $paper; }
+  &__title { font-size: 1.0625rem; font-weight: 600; line-height: 1.35; margin-bottom: 0.75rem; }
+  .link-arrow { margin-top: auto; }
+  .eyebrow { margin-bottom: 0; }
+}
+
+.hero__proof a { color: $neon-300; }

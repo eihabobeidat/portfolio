@@ -1,95 +1,34 @@
-/* Call to Action Button */
-.cta-btn {
-  display: inline-block;
-  position: relative;
-  padding: 0.8rem $default-font-size;
-  font-weight: bold;
+.btn-neon,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
   line-height: 1;
-  z-index: 1;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0px;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
-  }
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
-
-/* Hero Style */
-.cta-btn--hero {
-  @include supportColorForIE11();
-  border: 2px solid transparent;
-  border-image: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    $secondary-color 100%
-  );
-  border-image-slice: 1;
-  @include supportIE11() {
-    color: $secondary-color !important;
-    &:hover {
-      color: $white-color !important;
-    }
-  }
-
-  @include respond(phone) {
-    background-image: none;
-    border: 2px solid $secondary-color;
-    -webkit-text-fill-color: $secondary-color;
-  }
-
-  &::after {
-    background-image: linear-gradient(
-      135deg,
-      $primary-color 0%,
-      $secondary-color 100%
-    );
-
-    @include respond(phone) {
-      background-image: none;
-    }
-  }
-
-  &:hover {
-    -webkit-text-fill-color: $white-color;
-    text-decoration: none;
-
-    @include respond(phone) {
-      -webkit-text-fill-color: $secondary-color;
-    }
-
-    &::after {
-      width: 100%;
-    }
-  }
+.btn-neon {
+  background: $neon-500;
+  color: $ink;
+  box-shadow: $shadow-neon;
+  &:hover { background: $neon-400; color: $ink; transform: translateY(-1px); }
 }
-
-/* Resume Style */
-.cta-btn--resume {
-  color: $white-color;
-  border: 2px solid $white-color;
-
-  &::after {
-    background: $white-color;
-  }
-
-  &:hover {
-    color: $secondary-color;
-    text-decoration: none;
-
-    &::after {
-      width: 100%;
-    }
-  }
+.btn-ghost {
+  color: $paper;
+  font-weight: 500;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  &:hover { color: $paper; border-color: rgba($neon-500, 0.5); box-shadow: 0 0 24px rgba($neon-500, 0.25); }
 }
+.btn-sm { padding: 0.55rem 1rem; font-size: 0.8125rem; }
 
-/* Arrow Button */
-.up i {
-  color: #272727;
+.link-arrow {
+  font-size: 0.875rem; font-weight: 600; color: $neon-300;
+  &:hover { color: $neon-400; }
 }

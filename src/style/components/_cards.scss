@@ -1,0 +1,60 @@
+.project-card {
+  display: flex; flex-direction: column; width: 100%;
+  border-radius: 1rem; overflow: hidden; color: inherit;
+  transform-style: preserve-3d;
+  &:hover { color: inherit; }
+
+  &__visual {
+    position: relative; aspect-ratio: 2; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    background:
+      radial-gradient(circle at 30% 30%, rgba($neon-500, 0.28), transparent 60%),
+      radial-gradient(circle at 80% 90%, rgba($cyan, 0.12), transparent 55%),
+      $ink-card;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    &::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 50%;
+      background: linear-gradient(to top, $ink-card, transparent);
+    }
+  }
+  &__grid {
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    background-image:
+      linear-gradient(rgba($neon-500, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($neon-500, 0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(circle at center, #000 0, transparent 75%);
+    mask-image: radial-gradient(circle at center, #000 0, transparent 75%);
+  }
+  &__icon {
+    position: relative; z-index: 1; font-size: 2.75rem; color: $neon-300;
+    text-shadow: 0 0 24px rgba($neon-500, 0.8);
+    transition: transform 0.5s ease;
+  }
+  &:hover &__icon { transform: scale(1.12); }
+  &__num { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 2; font-size: 0.75rem; color: $neon-300; border-radius: 999px; padding: 0.2rem 0.65rem; }
+  &__company { position: absolute; top: 0.95rem; right: 0.9rem; z-index: 2; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em; color: $paper-dim; }
+
+  &__body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; gap: 0.25rem; }
+  &__title { font-size: 1.25rem; margin-bottom: 0.4rem; }
+  &__text { font-size: 0.875rem; color: $paper-dim; line-height: 1.65; margin-bottom: 1rem; }
+  .chips { margin-top: auto; }
+  &__more { margin-top: 1rem; font-size: 0.875rem; font-weight: 600; color: $neon-300; }
+}
+
+.page-link-card {
+  position: relative; display: block; overflow: hidden;
+  border-radius: 1.25rem; padding: 2rem; height: 100%; color: inherit;
+  &:hover { color: inherit; }
+  .bg-radial { opacity: 0.6; }
+  &__icon { font-size: 1.5rem; color: $neon-300; margin-bottom: 1.25rem; position: relative; }
+  &__title { font-size: 1.75rem; letter-spacing: -0.02em; position: relative; }
+  &__text { color: $paper-dim; position: relative; margin-bottom: 1.5rem; }
+  &__count { position: absolute; top: 1.5rem; right: 1.75rem; font-family: $font-mono; font-size: 3rem; font-weight: 700; color: rgba($neon-500, 0.18); line-height: 1; }
+  .link-arrow { position: relative; }
+}
+
+.stat-tile { padding: 1.25rem; border-radius: 1rem; height: 100%;
+  &__label { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.2em; color: $neon-300; margin-bottom: 0.35rem; }
+  &__value { font-size: 0.9375rem; color: $paper; }
+}

@@ -1,0 +1,17 @@
+.marquee {
+  position: relative; overflow: hidden;
+  border-top: 1px solid $ink-line; border-bottom: 1px solid $ink-line;
+  background: $ink-soft; padding: 2.5rem 0;
+  .bg-radial { opacity: 0.3; }
+  .eyebrow { text-align: center; margin-bottom: 1.5rem; position: relative; }
+  &__track {
+    display: flex; gap: 3rem; width: max-content; white-space: nowrap;
+    animation: marquee 35s linear infinite;
+  }
+  &:hover &__track { animation-play-state: paused; }
+  &__item {
+    font-size: 1.25rem; font-weight: 600; color: $paper-dim; letter-spacing: -0.01em;
+    display: inline-flex; align-items: center; gap: 3rem;
+    &::after { content: "✦"; color: rgba($neon-500, 0.6); }
+  }
+}

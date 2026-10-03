@@ -14,6 +14,21 @@ module.exports = merge(common, {
       template: "./src/template.html",
       favicon: "./src/assets/favicon.png",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/part-time.html",
+      filename: "part-time.html",
+      favicon: "./src/assets/favicon.png",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/freelance.html",
+      filename: "freelance.html",
+      favicon: "./src/assets/favicon.png",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/ai.html",
+      filename: "ai.html",
+      favicon: "./src/assets/favicon.png",
+    }),
   ],
   module: {
     rules: [
