@@ -1,8 +1,43 @@
 html {
-  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background: $ink;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
+  background: $ink;
+  color: $paper;
+  font-family: $font-sans;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: $neon-500; color: $ink; }
+
+a { color: $neon-300; text-decoration: none; transition: color 0.2s; }
+a:hover { color: $neon-400; }
+
+img { max-width: 100%; }
+
+.container { max-width: $container; padding-left: 1.25rem; padding-right: 1.25rem; }
+
+:focus-visible { outline: 2px solid $neon-400; outline-offset: 3px; border-radius: 6px; }
+
+@keyframes codeScroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

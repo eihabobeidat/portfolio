@@ -1,68 +1,13 @@
-.footer {
-  background-color: $dark-grey;
-  color: $white-color;
-  padding: 4.8rem 0;
-
-  @include respond(phone) {
-    border: 0px;
-  }
-
-  &__text {
-    color: darken($white-color, 50%);
-    font-size: 1.3rem;
-
-    a {
-      color: darken($white-color, 50%);
-      font-size: 1.3rem;
-      transition: all 0.4s;
-      display: inline-block;
-      background-color: $dark-grey;
-
-      &:hover,
-      &:active {
-        color: $primary-color;
-        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      }
-    }
-  }
-
-  & hr {
-    margin: 1rem auto;
-    border: 0;
-    width: 50%;
-    border-top: 2px solid grey;
-  }
-}
-
-.social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $white-color;
-    font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
-    margin: $default-font-size $default-font-size;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-}
-
-.back-to-top i {
-  color: $white-color;
-  margin: 1rem 0 $default-font-size;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    transform: translateY(-2px);
+.site-footer {
+  background: $ink-soft; border-top: 1px solid $ink-line; padding: 4rem 0 2rem;
+  &__about { color: $paper-dim; font-size: 0.875rem; line-height: 1.7; max-width: 26rem; margin: 1rem 0; }
+  &__heading { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: $neon-400; margin-bottom: 1rem; font-weight: 500; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin-bottom: 0.5rem; }
+  li a { color: $paper-dim; font-size: 0.875rem; &:hover { color: $neon-300; } }
+  &__bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid $ink-line; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.75rem; color: rgba($paper-dim, 0.7); }
+  &__social { display: flex; gap: 0.6rem;
+    a { width: 2.25rem; height: 2.25rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: $paper-dim; font-size: 1rem;
+      &:hover { color: $neon-300; } }
   }
 }

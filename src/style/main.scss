@@ -8,16 +8,18 @@
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/glass";
+@import "./components/nav";
+@import "./components/marquee";
+@import "./components/timeline";
+@import "./components/terminal";
+@import "./components/cards";
 
-@import "./layout/footer";
 @import "./layout/sections";
+@import "./layout/footer";
 
-@import "./sections/about";
-@import "./sections/contact";
 @import "./sections/hero";
+@import "./sections/about";
 @import "./sections/projects";
-
-
-.curved {
-	border-radius: 1rem;
-}
+@import "./sections/contact";
+@import "./sections/ai";

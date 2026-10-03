@@ -1,0 +1,24 @@
+.terminal {
+  border-radius: 1rem; overflow: hidden;
+  font-family: $font-mono; font-size: 0.875rem;
+  box-shadow: $shadow-neon;
+
+  &__bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid rgba($neon-500, 0.2);
+    background: rgba($ink-soft, 0.5);
+  }
+  &__lights { display: flex; align-items: center; gap: 0.5rem; }
+  &__light { width: 0.625rem; height: 0.625rem; border-radius: 50%; &--r { background: $err; } &--y { background: $warn; } &--g { background: $ok; } }
+  &__title { margin-left: 0.75rem; font-size: 0.75rem; color: $neon-300; }
+  &__live { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: $ok; }
+
+  &__body { padding: 1.5rem 1.25rem; background: rgba($ink, 0.8); line-height: 1.9; overflow-x: auto; }
+  &__row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; @media (max-width: 767px) { grid-template-columns: 1fr; gap: 0; margin-bottom: 0.6rem; } }
+  .k { color: $neon-300; }
+  .p { color: $muted; }
+  .s { color: $paper; }
+  .c { color: $muted; }
+  &__foot { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid $ink-line; color: $neon-300; }
+}

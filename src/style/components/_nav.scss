@@ -1,0 +1,47 @@
+.site-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba($ink, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid $ink-line;
+  transition: background 0.3s;
+  &.is-scrolled { background: rgba($ink, 0.88); }
+
+  &__bar { display: flex; align-items: center; justify-content: space-between; height: 4rem; gap: 1rem; }
+
+  &__links {
+    display: none; list-style: none; margin: 0; padding: 0; gap: 1.75rem; font-size: 0.875rem;
+    a { color: $paper-dim; &:hover, &.is-active { color: $neon-300; } }
+    @media (min-width: 992px) { display: flex; }
+  }
+
+  &__actions { display: none; align-items: center; gap: 0.75rem; @media (min-width: 992px) { display: flex; } }
+
+  &__toggle {
+    background: none; border: 0; color: $paper; font-size: 1.25rem; padding: 0.25rem 0.5rem;
+    @media (min-width: 992px) { display: none; }
+  }
+
+  &__mobile {
+    display: none; border-top: 1px solid $ink-line; padding: 1rem 0 1.25rem;
+    ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+    li a { display: block; padding: 0.45rem 0; color: $paper-dim; font-size: 0.9375rem; }
+    li a.is-active { color: $neon-300; }
+  }
+  &.is-open &__mobile { display: block; @media (min-width: 992px) { display: none; } }
+}
+
+.brand {
+  display: inline-flex; align-items: center; gap: 0.6rem; color: $paper;
+  &:hover { color: $paper; }
+  &__mark {
+    width: 2rem; height: 2rem; border-radius: 0.6rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: $font-mono; font-weight: 700; font-size: 0.8rem; color: $ink;
+    background: linear-gradient(135deg, $neon-300, $neon-600);
+    box-shadow: $shadow-neon-sm;
+  }
+  &__name { font-weight: 600; letter-spacing: -0.01em; }
+  &__dot { color: $neon-400; }
+  &__sub { display: block; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.2em; color: $muted; line-height: 1; margin-top: 0.2rem; }
+}
